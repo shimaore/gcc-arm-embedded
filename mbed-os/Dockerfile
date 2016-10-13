@@ -1,4 +1,5 @@
 FROM shimaore/gcc-arm-embedded
+MAINTAINER Stéphane Alnet <stephane@shimaore.net>
 
 RUN \
   apt-get update && \
