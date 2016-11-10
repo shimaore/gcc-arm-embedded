@@ -15,6 +15,8 @@ RUN \
 
 WORKDIR /opt/src/mbed-os
 RUN \
-  pip install -r requirements.txt \
-  && \
-  python tools/build.py -m LPC4337 -t GCC_ARM
+  pip install --upgrade pip && \
+  pip install wheel && \
+  pip install -r requirements.txt
+RUN \
+  python tools/build.py -m LPC4337 -t GCC_ARM -e
